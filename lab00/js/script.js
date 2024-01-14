@@ -1,5 +1,11 @@
-// Import messages module
-// import messages from '../lang/messages/en/user.js';
+/**
+ * This code has employed the use of ChatGPT
+ * Cassidy Boilley
+ * A01238612
+ * https://cassidy-boilley-lab00.vercel.app/
+ * 
+*/
+
 
 const messages = {
     invalidNumberofButtons: 'Please enter a valid number between 3 and 7.',
@@ -10,7 +16,7 @@ const messages = {
 
 class MemoryGame {
     constructor() {
-        // Remove the attempt to create an instance of messages
+    
         this.buttons = [];
         this.numberOfButtonsLabel = document.getElementById('numberOfButtonsLabel');
         this.numberOfButtonsInput = document.getElementById('numberOfButtonsInput');
@@ -21,9 +27,8 @@ class MemoryGame {
 
     startGame() {
         const numberOfButtons = parseInt(this.numberOfButtonsInput.value);
-        console.log(numberOfButtons);
         if (isNaN(numberOfButtons) || numberOfButtons < 3 || numberOfButtons > 7) {
-            // Access properties directly from the imported messages module
+
             alert(messages.invalidNumberofButtons);
             return;
         }
@@ -142,7 +147,6 @@ class MemoryGame {
 
     showCorrectOrder() {
         this.buttons.forEach((button, index) => {
-            console.log(index);
             button.innerText = index + 1;
         });
     }
